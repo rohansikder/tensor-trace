@@ -1,0 +1,676 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-23T11:45:41.585844+00:00",
+  "method": "Independent batched NumPy full-sequence forward pass versus Rust cached and uncached inference",
+  "absoluteTolerance": 0.0003,
+  "relativeTolerance": 0.0003,
+  "status": "passed",
+  "checks": [
+    {
+      "model": "tiny-shared.bin",
+      "modelSha256": "281a1e3342e75bb95796c77a8d90a787f3207debb0b110e81f92c2820836da38",
+      "tokens": [
+        1
+      ],
+      "layer": 0,
+      "head": 0,
+      "cacheEnabled": true,
+      "greedyToken": 8,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 6.266395569110017e-07
+      },
+      "attention": {
+        "shape": [
+          1,
+          1
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "tiny-shared.bin",
+      "modelSha256": "281a1e3342e75bb95796c77a8d90a787f3207debb0b110e81f92c2820836da38",
+      "tokens": [
+        1
+      ],
+      "layer": 0,
+      "head": 0,
+      "cacheEnabled": false,
+      "greedyToken": 8,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 6.266395569110017e-07
+      },
+      "attention": {
+        "shape": [
+          1,
+          1
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "cacheEquivalence": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "model": "tiny-shared.bin",
+      "modelSha256": "281a1e3342e75bb95796c77a8d90a787f3207debb0b110e81f92c2820836da38",
+      "tokens": [
+        1,
+        77
+      ],
+      "layer": 1,
+      "head": 3,
+      "cacheEnabled": true,
+      "greedyToken": 56,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 9.560302736133508e-07
+      },
+      "attention": {
+        "shape": [
+          2,
+          2
+        ],
+        "maxAbsoluteError": 1.7733764678951047e-08
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "tiny-shared.bin",
+      "modelSha256": "281a1e3342e75bb95796c77a8d90a787f3207debb0b110e81f92c2820836da38",
+      "tokens": [
+        1,
+        77
+      ],
+      "layer": 1,
+      "head": 3,
+      "cacheEnabled": false,
+      "greedyToken": 56,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 9.560302736133508e-07
+      },
+      "attention": {
+        "shape": [
+          2,
+          2
+        ],
+        "maxAbsoluteError": 1.7733764678951047e-08
+      },
+      "cacheEquivalence": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "model": "tiny-shared.bin",
+      "modelSha256": "281a1e3342e75bb95796c77a8d90a787f3207debb0b110e81f92c2820836da38",
+      "tokens": [
+        1,
+        7,
+        29,
+        4
+      ],
+      "layer": 0,
+      "head": 1,
+      "cacheEnabled": true,
+      "greedyToken": 415,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 9.234344482411672e-07
+      },
+      "attention": {
+        "shape": [
+          4,
+          4
+        ],
+        "maxAbsoluteError": 6.347656245075939e-08
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "tiny-shared.bin",
+      "modelSha256": "281a1e3342e75bb95796c77a8d90a787f3207debb0b110e81f92c2820836da38",
+      "tokens": [
+        1,
+        7,
+        29,
+        4
+      ],
+      "layer": 0,
+      "head": 1,
+      "cacheEnabled": false,
+      "greedyToken": 415,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 9.234344482411672e-07
+      },
+      "attention": {
+        "shape": [
+          4,
+          4
+        ],
+        "maxAbsoluteError": 6.347656245075939e-08
+      },
+      "cacheEquivalence": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "model": "tiny-shared.bin",
+      "modelSha256": "281a1e3342e75bb95796c77a8d90a787f3207debb0b110e81f92c2820836da38",
+      "tokens": [
+        1,
+        19,
+        3,
+        300,
+        65,
+        2,
+        9
+      ],
+      "layer": 1,
+      "head": 2,
+      "cacheEnabled": true,
+      "greedyToken": 265,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 2.964121465373181e-06
+      },
+      "attention": {
+        "shape": [
+          7,
+          7
+        ],
+        "maxAbsoluteError": 3.131110000720305e-07
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "tiny-shared.bin",
+      "modelSha256": "281a1e3342e75bb95796c77a8d90a787f3207debb0b110e81f92c2820836da38",
+      "tokens": [
+        1,
+        19,
+        3,
+        300,
+        65,
+        2,
+        9
+      ],
+      "layer": 1,
+      "head": 2,
+      "cacheEnabled": false,
+      "greedyToken": 265,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 2.964121465373181e-06
+      },
+      "attention": {
+        "shape": [
+          7,
+          7
+        ],
+        "maxAbsoluteError": 3.131110000720305e-07
+      },
+      "cacheEquivalence": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "model": "tiny-shared.bin",
+      "modelSha256": "281a1e3342e75bb95796c77a8d90a787f3207debb0b110e81f92c2820836da38",
+      "tokens": [
+        1,
+        5,
+        28,
+        97,
+        54,
+        12,
+        23,
+        51,
+        6,
+        8,
+        34,
+        321,
+        15,
+        127,
+        17
+      ],
+      "layer": 1,
+      "head": 3,
+      "cacheEnabled": true,
+      "greedyToken": 200,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 1.1844924926451839e-06
+      },
+      "attention": {
+        "shape": [
+          15,
+          15
+        ],
+        "maxAbsoluteError": 1.2104400637369395e-07
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "tiny-shared.bin",
+      "modelSha256": "281a1e3342e75bb95796c77a8d90a787f3207debb0b110e81f92c2820836da38",
+      "tokens": [
+        1,
+        5,
+        28,
+        97,
+        54,
+        12,
+        23,
+        51,
+        6,
+        8,
+        34,
+        321,
+        15,
+        127,
+        17
+      ],
+      "layer": 1,
+      "head": 3,
+      "cacheEnabled": false,
+      "greedyToken": 200,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 1.1844924926451839e-06
+      },
+      "attention": {
+        "shape": [
+          15,
+          15
+        ],
+        "maxAbsoluteError": 1.2104400637369395e-07
+      },
+      "cacheEquivalence": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "model": "tiny-unshared.bin",
+      "modelSha256": "45cd09a5cb324bbdce3901e223ad182ac775eab1a90cb19319fdcfe15c189c15",
+      "tokens": [
+        1
+      ],
+      "layer": 0,
+      "head": 0,
+      "cacheEnabled": true,
+      "greedyToken": 35,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 1.1907231139973717e-06
+      },
+      "attention": {
+        "shape": [
+          1,
+          1
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "tiny-unshared.bin",
+      "modelSha256": "45cd09a5cb324bbdce3901e223ad182ac775eab1a90cb19319fdcfe15c189c15",
+      "tokens": [
+        1
+      ],
+      "layer": 0,
+      "head": 0,
+      "cacheEnabled": false,
+      "greedyToken": 35,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 1.1907231139973717e-06
+      },
+      "attention": {
+        "shape": [
+          1,
+          1
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "cacheEquivalence": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "model": "tiny-unshared.bin",
+      "modelSha256": "45cd09a5cb324bbdce3901e223ad182ac775eab1a90cb19319fdcfe15c189c15",
+      "tokens": [
+        1,
+        77
+      ],
+      "layer": 1,
+      "head": 3,
+      "cacheEnabled": true,
+      "greedyToken": 411,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 8.774002075995213e-07
+      },
+      "attention": {
+        "shape": [
+          2,
+          2
+        ],
+        "maxAbsoluteError": 1.8169792176392363e-07
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "tiny-unshared.bin",
+      "modelSha256": "45cd09a5cb324bbdce3901e223ad182ac775eab1a90cb19319fdcfe15c189c15",
+      "tokens": [
+        1,
+        77
+      ],
+      "layer": 1,
+      "head": 3,
+      "cacheEnabled": false,
+      "greedyToken": 411,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 8.774002075995213e-07
+      },
+      "attention": {
+        "shape": [
+          2,
+          2
+        ],
+        "maxAbsoluteError": 1.8169792176392363e-07
+      },
+      "cacheEquivalence": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "model": "tiny-unshared.bin",
+      "modelSha256": "45cd09a5cb324bbdce3901e223ad182ac775eab1a90cb19319fdcfe15c189c15",
+      "tokens": [
+        1,
+        7,
+        29,
+        4
+      ],
+      "layer": 0,
+      "head": 1,
+      "cacheEnabled": true,
+      "greedyToken": 133,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 1.3271690368910072e-06
+      },
+      "attention": {
+        "shape": [
+          4,
+          4
+        ],
+        "maxAbsoluteError": 4.333236694464837e-08
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "tiny-unshared.bin",
+      "modelSha256": "45cd09a5cb324bbdce3901e223ad182ac775eab1a90cb19319fdcfe15c189c15",
+      "tokens": [
+        1,
+        7,
+        29,
+        4
+      ],
+      "layer": 0,
+      "head": 1,
+      "cacheEnabled": false,
+      "greedyToken": 133,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 1.3271690368910072e-06
+      },
+      "attention": {
+        "shape": [
+          4,
+          4
+        ],
+        "maxAbsoluteError": 4.333236694464837e-08
+      },
+      "cacheEquivalence": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "model": "tiny-unshared.bin",
+      "modelSha256": "45cd09a5cb324bbdce3901e223ad182ac775eab1a90cb19319fdcfe15c189c15",
+      "tokens": [
+        1,
+        19,
+        3,
+        300,
+        65,
+        2,
+        9
+      ],
+      "layer": 1,
+      "head": 2,
+      "cacheEnabled": true,
+      "greedyToken": 411,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 1.0695755003897744e-06
+      },
+      "attention": {
+        "shape": [
+          7,
+          7
+        ],
+        "maxAbsoluteError": 3.022795868057315e-07
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "tiny-unshared.bin",
+      "modelSha256": "45cd09a5cb324bbdce3901e223ad182ac775eab1a90cb19319fdcfe15c189c15",
+      "tokens": [
+        1,
+        19,
+        3,
+        300,
+        65,
+        2,
+        9
+      ],
+      "layer": 1,
+      "head": 2,
+      "cacheEnabled": false,
+      "greedyToken": 411,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 1.0695755003897744e-06
+      },
+      "attention": {
+        "shape": [
+          7,
+          7
+        ],
+        "maxAbsoluteError": 3.022795868057315e-07
+      },
+      "cacheEquivalence": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "model": "tiny-unshared.bin",
+      "modelSha256": "45cd09a5cb324bbdce3901e223ad182ac775eab1a90cb19319fdcfe15c189c15",
+      "tokens": [
+        1,
+        5,
+        28,
+        97,
+        54,
+        12,
+        23,
+        51,
+        6,
+        8,
+        34,
+        321,
+        15,
+        127,
+        17
+      ],
+      "layer": 1,
+      "head": 3,
+      "cacheEnabled": true,
+      "greedyToken": 471,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 8.799896238365079e-07
+      },
+      "attention": {
+        "shape": [
+          15,
+          15
+        ],
+        "maxAbsoluteError": 2.0412429807548094e-07
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "tiny-unshared.bin",
+      "modelSha256": "45cd09a5cb324bbdce3901e223ad182ac775eab1a90cb19319fdcfe15c189c15",
+      "tokens": [
+        1,
+        5,
+        28,
+        97,
+        54,
+        12,
+        23,
+        51,
+        6,
+        8,
+        34,
+        321,
+        15,
+        127,
+        17
+      ],
+      "layer": 1,
+      "head": 3,
+      "cacheEnabled": false,
+      "greedyToken": 471,
+      "logits": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 8.799896238365079e-07
+      },
+      "attention": {
+        "shape": [
+          15,
+          15
+        ],
+        "maxAbsoluteError": 2.0412429807548094e-07
+      },
+      "cacheEquivalence": {
+        "shape": [
+          512
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    }
+  ]
+}

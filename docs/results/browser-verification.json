@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-23T17:42:28.497768+00:00",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "Model readiness and honest empty state",
+      "status": "passed"
+    },
+    {
+      "name": "Real single-token trace across all six visual stages",
+      "status": "passed"
+    },
+    {
+      "name": "Layer and head selectors recapture actual attention",
+      "status": "passed"
+    },
+    {
+      "name": "Model details keyboard navigation and Escape dismissal",
+      "status": "passed"
+    },
+    {
+      "name": "Streaming generation, decoded output, and settings invalidation",
+      "status": "passed"
+    },
+    {
+      "name": "Generation cancellation releases the runtime",
+      "status": "passed"
+    },
+    {
+      "name": "Seeded repeatability and structured API input errors",
+      "status": "passed"
+    },
+    {
+      "name": "Measured cache comparison, live chart, and exact token equality",
+      "status": "passed"
+    },
+    {
+      "name": "Workload changes invalidate stale results; benchmark cancellation releases CPU",
+      "status": "passed"
+    },
+    {
+      "name": "390px mobile walkthrough and comparison without horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "Missing weights produce actionable API errors and a disabled unavailable UI",
+      "status": "passed"
+    },
+    {
+      "name": "No browser exceptions or console errors",
+      "status": "passed"
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "desktopViewport": {
+    "width": 1487,
+    "height": 1058
+  },
+  "mobileViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "browserVersion": "154.0.8037.57",
+  "benchmarkReport": "benchmark.json"
+}

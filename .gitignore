@@ -1,0 +1,13 @@
+/target/
+/models/*
+!/models/README.md
+/web/node_modules/
+/web/dist/
+/web/*.tsbuildinfo
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+/artifacts/
+/build/

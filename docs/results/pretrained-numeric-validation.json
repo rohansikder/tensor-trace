@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-23T11:45:41.589296+00:00",
+  "method": "Independent batched NumPy full-sequence forward pass versus Rust cached and uncached inference",
+  "absoluteTolerance": 0.0003,
+  "relativeTolerance": 0.0003,
+  "status": "passed",
+  "checks": [
+    {
+      "model": "stories15M.bin",
+      "modelSha256": "cd590644d963867a2b6e5a1107f51fad663c41d79c149fbecbbb1f95fa81f49a",
+      "tokens": [
+        1
+      ],
+      "layer": 0,
+      "head": 0,
+      "cacheEnabled": true,
+      "greedyToken": 9038,
+      "logits": {
+        "shape": [
+          32000
+        ],
+        "maxAbsoluteError": 1.361611938488494e-05
+      },
+      "attention": {
+        "shape": [
+          1,
+          1
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "stories15M.bin",
+      "modelSha256": "cd590644d963867a2b6e5a1107f51fad663c41d79c149fbecbbb1f95fa81f49a",
+      "tokens": [
+        1
+      ],
+      "layer": 0,
+      "head": 0,
+      "cacheEnabled": false,
+      "greedyToken": 9038,
+      "logits": {
+        "shape": [
+          32000
+        ],
+        "maxAbsoluteError": 1.361611938488494e-05
+      },
+      "attention": {
+        "shape": [
+          1,
+          1
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "cacheEquivalence": {
+        "shape": [
+          32000
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "model": "stories15M.bin",
+      "modelSha256": "cd590644d963867a2b6e5a1107f51fad663c41d79c149fbecbbb1f95fa81f49a",
+      "tokens": [
+        1,
+        42,
+        7,
+        300
+      ],
+      "layer": 1,
+      "head": 2,
+      "cacheEnabled": true,
+      "greedyToken": 471,
+      "logits": {
+        "shape": [
+          32000
+        ],
+        "maxAbsoluteError": 1.80846069337548e-05
+      },
+      "attention": {
+        "shape": [
+          4,
+          4
+        ],
+        "maxAbsoluteError": 4.7770919797685e-07
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "stories15M.bin",
+      "modelSha256": "cd590644d963867a2b6e5a1107f51fad663c41d79c149fbecbbb1f95fa81f49a",
+      "tokens": [
+        1,
+        42,
+        7,
+        300
+      ],
+      "layer": 1,
+      "head": 2,
+      "cacheEnabled": false,
+      "greedyToken": 471,
+      "logits": {
+        "shape": [
+          32000
+        ],
+        "maxAbsoluteError": 1.80846069337548e-05
+      },
+      "attention": {
+        "shape": [
+          4,
+          4
+        ],
+        "maxAbsoluteError": 4.7770919797685e-07
+      },
+      "cacheEquivalence": {
+        "shape": [
+          32000
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    },
+    {
+      "model": "stories15M.bin",
+      "modelSha256": "cd590644d963867a2b6e5a1107f51fad663c41d79c149fbecbbb1f95fa81f49a",
+      "tokens": [
+        1,
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "layer": 2,
+      "head": 4,
+      "cacheEnabled": true,
+      "greedyToken": 29889,
+      "logits": {
+        "shape": [
+          32000
+        ],
+        "maxAbsoluteError": 1.8393511962866427e-05
+      },
+      "attention": {
+        "shape": [
+          8,
+          8
+        ],
+        "maxAbsoluteError": 5.975561523374751e-07
+      },
+      "cacheEquivalence": null,
+      "status": "passed"
+    },
+    {
+      "model": "stories15M.bin",
+      "modelSha256": "cd590644d963867a2b6e5a1107f51fad663c41d79c149fbecbbb1f95fa81f49a",
+      "tokens": [
+        1,
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "layer": 2,
+      "head": 4,
+      "cacheEnabled": false,
+      "greedyToken": 29889,
+      "logits": {
+        "shape": [
+          32000
+        ],
+        "maxAbsoluteError": 1.8393511962866427e-05
+      },
+      "attention": {
+        "shape": [
+          8,
+          8
+        ],
+        "maxAbsoluteError": 5.975561523374751e-07
+      },
+      "cacheEquivalence": {
+        "shape": [
+          32000
+        ],
+        "maxAbsoluteError": 0.0
+      },
+      "status": "passed"
+    }
+  ]
+}

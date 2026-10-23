@@ -1,0 +1,125 @@
+{
+  "checkedAt": "2026-10-23T17:42:28.497768+00:00",
+  "seedPrompt": "Once upon a time",
+  "source": "Real browser request to the release Rust runtime at /api/benchmark/stream",
+  "model": "stories15M.bin",
+  "points": [
+    {
+      "contextLength": 8,
+      "cacheOn": {
+        "prefillMs": 40.609113,
+        "timeToFirstTokenMs": 41.255178,
+        "forwardDecodeMs": 34.104833,
+        "decodeMsPerToken": 5.2652922857142865,
+        "tokensPerSecond": 189.92297972007847,
+        "totalMs": 82.068174,
+        "kvCacheBytes": 207360,
+        "generatedTokens": 8,
+        "decodeTokens": 7,
+        "samplesMsPerToken": [
+          5.093820857142857,
+          5.2652922857142865,
+          5.886109714285715
+        ]
+      },
+      "cacheOff": {
+        "prefillMs": 37.70532,
+        "timeToFirstTokenMs": 38.083451000000004,
+        "forwardDecodeMs": 412.55828600000007,
+        "decodeMsPerToken": 59.42159371428572,
+        "tokensPerSecond": 16.82889901621045,
+        "totalMs": 453.719082,
+        "kvCacheBytes": 0,
+        "generatedTokens": 8,
+        "decodeTokens": 7,
+        "samplesMsPerToken": [
+          58.79787157142857,
+          59.42159371428572,
+          64.36031785714286
+        ]
+      },
+      "tokensMatch": true,
+      "speedup": 11.285526137933028
+    },
+    {
+      "contextLength": 16,
+      "cacheOn": {
+        "prefillMs": 85.81900200000001,
+        "timeToFirstTokenMs": 87.786966,
+        "forwardDecodeMs": 35.455176,
+        "decodeMsPerToken": 5.509482428571427,
+        "tokensPerSecond": 181.50525261939958,
+        "totalMs": 128.278683,
+        "kvCacheBytes": 317952,
+        "generatedTokens": 8,
+        "decodeTokens": 7,
+        "samplesMsPerToken": [
+          5.254261857142857,
+          5.781073999999999,
+          5.509482428571427
+        ]
+      },
+      "cacheOff": {
+        "prefillMs": 77.426884,
+        "timeToFirstTokenMs": 77.791414,
+        "forwardDecodeMs": 721.7156650000001,
+        "decodeMsPerToken": 103.69325557142858,
+        "tokensPerSecond": 9.643828757128327,
+        "totalMs": 803.5416640000001,
+        "kvCacheBytes": 0,
+        "generatedTokens": 8,
+        "decodeTokens": 7,
+        "samplesMsPerToken": [
+          103.69325557142858,
+          104.98373285714287,
+          99.32927328571428
+        ]
+      },
+      "tokensMatch": true,
+      "speedup": 18.82087054742011
+    },
+    {
+      "contextLength": 32,
+      "cacheOn": {
+        "prefillMs": 157.96553799999998,
+        "timeToFirstTokenMs": 158.45812199999997,
+        "forwardDecodeMs": 34.515547,
+        "decodeMsPerToken": 5.346112571428571,
+        "tokensPerSecond": 187.0518038367425,
+        "totalMs": 195.90295,
+        "kvCacheBytes": 539136,
+        "generatedTokens": 8,
+        "decodeTokens": 7,
+        "samplesMsPerToken": [
+          4.9643617142857135,
+          5.346112571428571,
+          5.430448142857142
+        ]
+      },
+      "cacheOff": {
+        "prefillMs": 194.16224100000002,
+        "timeToFirstTokenMs": 194.65498300000002,
+        "forwardDecodeMs": 1280.674937,
+        "decodeMsPerToken": 183.3750902857143,
+        "tokensPerSecond": 5.453303381838358,
+        "totalMs": 1461.742569,
+        "kvCacheBytes": 0,
+        "generatedTokens": 8,
+        "decodeTokens": 7,
+        "samplesMsPerToken": [
+          189.77437785714284,
+          180.96286757142852,
+          183.3750902857143
+        ]
+      },
+      "tokensMatch": true,
+      "speedup": 34.30064141666837
+    }
+  ],
+  "repeats": 3,
+  "maxTokens": 8,
+  "elapsedMs": 12746.412172,
+  "method": "Median steady-decode time per token after one warmup per mode; alternating mode order; identical greedy tokens; first-token prefill measured separately",
+  "tracing": false,
+  "promptConstruction": "One BOS token followed by repeated token IDs from the seed prompt, truncated to each exact context length"
+}
