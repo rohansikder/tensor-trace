@@ -29,7 +29,7 @@ The environment was a Linux container on an AMD EPYC 9V74, with three visible
 logical CPUs and a cgroup quota equivalent to two CPUs. The model forward pass
 uses one thread. The release build used Rust 1.99.1 and its default target CPU,
 without custom `RUSTFLAGS`. See [environment.json](environment.json) for the
-toolchain, model binary context, executable hash, and source-file hashes.
+toolchain, executable hash, and source-file hashes.
 The measurements include ordinary container scheduling noise and only three
 repeats. They describe this implementation and workload, not a general claim
 about other runtimes, machines, or large models.

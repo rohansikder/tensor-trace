@@ -41,7 +41,7 @@ With caching enabled, each layer retains previous tokens' keys and values. Subse
 
 The comparison uses the same exact input token IDs, greedy decoding, and generation count for each mode. Both paths are warmed; execution order alternates across repetitions; timings are reported as medians. Output-token equality is checked. Tracing is disabled during timing.
 
-Prefill produces the distribution for the first generated token. Decode timing covers later generated tokens, so `decodeTokens = generatedTokens - 1`. A run ending immediately has no decode samples. Prefill, decode, and total times are distinct quantities.
+Prefill produces the distribution for the first generated token. Decode timing covers later generated tokens, so `decodeTokens = generatedTokens - 1`. A run ending immediately has no decode samples. Prefill, decode, and total times are distinct quantities. Prefill/decode timings cover forward computation and the documented sampling/summary work. The separate `totalMs` field measures the generation loop, including trace construction and synchronous callbacks; streamed token serialization or backpressure can therefore increase it. It excludes initial tokenization/session allocation and final HTTP response serialization, and is not end-to-end request latency.
 
 `kvCacheBytes` describes the active reusable K/V payload. It does not measure total process RSS, allocator capacity, weights, activations, or temporary buffers. Uncached inference still needs temporary K/V values while computing a full prefix. The field measures retained reusable state, not the claim that uncached inference uses zero memory.
 
